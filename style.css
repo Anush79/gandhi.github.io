@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    
+}
+body{
+      background-color:rgb(248, 102, 4);
+      
+      animation-name: animatebottom;
+      animation-duration: 3s;
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 98px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 98px;
+        opacity: 1
+    }
+}
+
+#musicback:hover{
+    cursor: pointer;
+    
+    
+
+}
+
+
+section{
+    position: relative;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+.logo
+{
+    position: fixed;
+    top: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    z-index: 100;
+    cursor: pointer;
+    border-bottom: solid 5px ;
+    border-radius: 50%;
+    text-shadow: 0.1em 0.3em 0.2em black;
+
+}
+ span{
+    color: #138808;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+h2 span{
+    font-size:1.3em;
+}
+section .bg1{
+    position: absolute;
+    top: 0;
+    right: 60px;
+    height: 100%;
+    
+}
+section .content
+{
+    position: relative;
+    max-width: 680px;
+    z-index:1;
+
+}
+section .content h2{
+    color: #fff;
+    font-size: 3em;
+    line-height: 1.1em;
+    font-weight: 700;
+}
+section .content p{
+    color: #fff;
+    font-size: 1.1em;
+    margin: 20px 0 10px 0px;
+    
+}
+section .content a{
+    color:#fff;
+    background:#138808;
+    font-size: 1em;
+    margin: 20px 0;
+    font-weight: 500;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+}
+.copyright{
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 1.1em;
+    margin:20px 0 10px;
+}
+.about{
+    height: 100vh;
+    display: inline-block;
+    align-items: center;
+}
+.menutoggle{
+  position:fixed;
+    top:0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #138808 url(socialpng/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+.menutoggle.active {
+    background: #138808 url(socialpng/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+.navigation{
+    position: fixed;
+    top: 0;
+    left: calc(100% - 60px) ;
+    width:100%;
+    height:100%;
+    background: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+}
+
+.navigation.active{
+    left:0px;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+    
+}
+.navigation ul li a {
+    font-size: 2.5em;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+}
+.navigation ul li a:hover{
+    color: #138808;
+}
+.socialBar{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    border-right: 1px solid rgba(0, 0, 0, 0.103);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialBar ul{
+    position:relative;
+}
+.socialBar ul li{
+    position: relative;
+    list-style: none;
+}
+.socialBar ul li a{
+     position: relative;
+     
+     display: inline-block;
+     transform: scale(0.6);
+}
+.socialBar ul li a img{
+    position:relative;
+    top: 450px;
+    align-items: center;
+    max-width: 40px;
+}
+.socialBar .emailbox{
+    position: absolute;
+    bottom: 20px;
+    transform:scale(0.6);
+}
+.socialBar .emailbox img{
+    position: relative;
+    top:570px;
+    max-width: 52px;
+}
+
+.foot{
+    position: fixed;
+    left: 0;
+    bottom:0;
+    width:100%;
+    background-color: #138808;
+    color: white;
+    text-align: center;
+}
+
+@media(max-width: 767px)
+{
+    section{
+        padding:100px 40px;
+    }
+    section .content h2 {
+        font-size:2.5em;
+    }
+    .navigation {
+        left:100%;
+    }
+    section .bg{
+        position:absolute;
+        top:0;
+        right:0;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        opacity:0.5;
+    }
+    section .logo{
+        top:10px;
+        font-size:1.5em;
+    }
+    .navigation ul li a{
+        font-size: 2em;
+        color: black;
+        text-decoration: none;
+        font-weight: 300;
+    }
+
+}

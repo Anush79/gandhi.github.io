@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gandhi Jayanti</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="logo">
+            M<span>.</span>K<span>.</span>Gandh<span>i</span>
+        </div>
+
+        <img src="bg1.JPG" class="bg1">
+        <div class="content">
+
+            <h2>Happy<br>Gandhi Jayant<span>i</span></h2>
+            <p>Hey there, Myself Anushka, a student of MCA, wishing you you all a very happy Gandhi Jayanti.<br>
+                He taught us to be the change we wish to see in the world. He taught us that where<br>there is love
+                there is life. He followed the path of Ahimsa and non-violence to make us unite. He is our Father of the
+                Nation – Mahatma Gandhi.
+                <br>Let us remember the Mahatma who shook the world in a gentle way! Happy Gandhi Jayanti!
+            </p>
+            <a href="#"
+                onclick="alert('Hii, hope you are doing great :)\n*If there is no music, please wait for a few second to load\n*Click on the menu icon to explore more about M.K.Gandhi\n*To connect with my institute please follow the social media links')">
+                Get
+                started</a>
+        </div>
+
+        <p class="copyright">&copy;2021. Anushka jaiswal</p>
+
+    </section>
+    <div class="menutoggle" onclick="Mtoggle();"></div>
+    <div class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="quotes.html">Quotes</a></li>
+            <li><a href="books.html">Books</a></li>
+            
+            <li><a id="musicback" onClick="playPause()">
+                        <audio src="music.mp3" autoplay loop></audio>
+                        Music ⏯
+                   </a> </li>
+        </ul>
+        <div class="socialBar">
+            <ul>
+                <li><a href="https://www.facebook.com/ignou.newhorizons" target="_blank"><img src="socialpng/facebook.png"></a>
+                </li>
+                <li><a href="https://twitter.com/OfficialIGNOU" target="_blank"><img src="socialpng/twitter.png"></a></li>
+                <li><a href="https://www.instagram.com/officialpageignou/" target="_blank"><img src="socialpng/instagram.png"></a>
+                </li>
+            </ul>
+            <a href="mailto:jaianushka1056@gmail.com" class="emailbox"><img src="socialpng/emaill.png" alt="email"></a>
+        </div>
+    </div>
+    </div>
+
+ 
+
+
+
+    <script type="text/javascript">
+        function Mtoggle() {
+            var menutoggle = document.querySelector('.menutoggle');
+            var navigation = document.querySelector('.navigation');
+
+            menutoggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+
+        }
+        var aud = document.getElementById("musicback").children[0];
+        var isPlaying = true;
+        aud.play();
+
+        function playPause() {
+            if (isPlaying) {
+                aud.pause();
+            } else {
+                aud.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+
+
+</html>
